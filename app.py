@@ -12,35 +12,37 @@ IMG_SIZE = (224, 224)
 
 # Define label mapping
 labels = ['Normal', 'Stroke']
+
+# Styled Title
 st.markdown(
     """
     <div style='
         border: 2px solid #4A90E2;
         background-color: #E8F0FE;
         padding: 15px;
-        border-radius: 20px;
+        border-radius: 10px;
         color: #1A237E;
         text-align: center;
         font-size: 30px;
         font-weight: bold;
+        margin-bottom: 10px;
     '>
         🧠 Stroke Types Prediction
     </div>
     """,
     unsafe_allow_html=True
 )
-# st.write("Upload a stroke image to automatically predict its classification: Ischemic, Hemorrhagic, or Transient Ischemic Attack.")
+
+# Styled Subtitle
 st.markdown(
     """
     <p style='
-        border: 2px solid #4A90E2;
-        background-color: #E8F0FE;
-        padding: 15px;
-        border-radius: 20px;
-        color: #1A237E;
-        text-align: center;
-        font-size: 20px;
-        font-weight: bold;
+        background-color: #F5F5F5;
+        padding: 10px 15px;
+        border-left: 5px solid #4A90E2;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-bottom: 20px;
     '>
         Upload a stroke image to automatically predict its classification: 
         <strong>Ischemic</strong>, <strong>Hemorrhagic</strong>, or <strong>Transient Ischemic Attack</strong>.
@@ -48,7 +50,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-# Image upload
+
 # Styled file uploader section
 st.markdown(
     """
@@ -57,7 +59,8 @@ st.markdown(
         padding: 20px;
         border-radius: 10px;
         background-color: #FAFAFA;
-        margin-top: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
     '>
     """,
     unsafe_allow_html=True
@@ -67,9 +70,8 @@ uploaded_file = st.file_uploader("📤 Choose an image...", type=["jpg", "jpeg",
 
 st.markdown("</div>", unsafe_allow_html=True)
 
-#uploaded_file = st.file_uploader("📤 Choose an image...", type=["jpg", "jpeg", "png"])
-
- if uploaded_file is not None:
+# Process the uploaded image
+if uploaded_file is not None:
     # Read and display image
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     image = cv2.imdecode(file_bytes, 1)
@@ -86,5 +88,5 @@ st.markdown("</div>", unsafe_allow_html=True)
     confidence = prediction[class_idx]
 
     # Display results
-    st.write(f"### Prediction: **{labels[class_idx]}**")
-    st.write(f"Confidence: {confidence:.2f}")
+    st.markdown(f"<h3 style='color: #1A237E;'>Prediction: <strong>{labels[class_idx]}</strong></h3>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size:18px;'>Confidence: <strong>{confidence:.2f}</strong></p>", unsafe_allow_html=True)
