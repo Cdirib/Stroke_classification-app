@@ -37,9 +37,9 @@ st.markdown(
     <p style='
         background-color: #F5F5F5;
         padding: 100px 15px;
-        border-left: 100px solid #4A90E2;
-        border-radius: 100px;
-        font-size: 16px;
+        border-left: 60px solid #4A90E2;
+        border-radius: 60px;
+        font-size: 20px;
     '>
         Upload a stroke image to automatically predict its classification: 
         <strong>Ischemic</strong>, <strong>Hemorrhagic</strong>, or <strong>Transient Ischemic Attack</strong>.
