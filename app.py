@@ -6,7 +6,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
 
 # Load the trained model
-model = load_model("stroke_classification_model.h5")
+model = load_model("stroke-prediction_model.h5")
 
 # Set image dimensions (based on your training setup)
 IMG_SIZE = (224, 224)
@@ -48,7 +48,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
 
 # Load the trained model
-model = load_model("stroke_classification_model.h5")
+model = load_model("stroke-prediction_model.h5")
 
 # Set image dimensions (based on your training setup)
 IMG_SIZE = (224, 224)
