@@ -52,24 +52,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Styled file uploader section
-st.markdown(
-    """
-    <div style='
-        border: 2px dashed #4A90E2;
-        padding: 20px;
-        border-radius: 10px;
-        background-color: #FAFAFA;
-        margin-top: 10px;
-        margin-bottom: 20px;
-    '>
-    """,
-    unsafe_allow_html=True
-)
-
 uploaded_file = st.file_uploader("📤 Choose an image...", type=["jpg", "jpeg", "png"])
-
-st.markdown("</div>", unsafe_allow_html=True)
 
 # Process the uploaded image
 if uploaded_file is not None:
