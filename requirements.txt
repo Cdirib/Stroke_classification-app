@@ -4,8 +4,3 @@ tensorflow
 numpy
 opencv-python
 =======
-streamlit
-tensorflow
-numpy
-opencv-python
->>>>>>> f34d489 (Initial commit with model)
