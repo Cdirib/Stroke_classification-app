@@ -37,8 +37,8 @@ st.markdown(
     <p style='
         background-color: #F5F5F5;
         padding: 10px 15px;
-        border-left: 5px solid #4A90E2;
-        border-radius: 5px;
+        border-left: 50px solid #4A90E2;
+        border-radius: 50px;
         font-size: 16px;
     '>
         Upload a stroke image to automatically predict its classification: 
