@@ -35,9 +35,9 @@ st.markdown(
 st.markdown(
     """
     <p style='
-        background-color: #F5F5F5;
+        #background-color: #F5F5F5;
         padding: 40px 15px;
-        border-left: 60px solid #4A90E2;
+       # border-left: 60px solid #4A90E2;
         border-radius: 60px;
         font-size: 20px;
     '>
