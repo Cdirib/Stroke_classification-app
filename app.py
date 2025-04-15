@@ -14,7 +14,11 @@ IMG_SIZE = (224, 224)
 labels = ['Normal', 'Stroke']
 
 # Title
-st.title("🧠 Stroke types prediction")
+# st.title("🧠 Stroke types prediction")
+st.markdown(
+    "<h1 style='color: #4A90E2;'>🧠 Stroke Types Prediction</h1>",
+    unsafe_allow_html=True
+)
 st.write("Upload a stroke image to automatically predict its classification: Ischemic, Hemorrhagic, or Transient Ischemic Attack.")
 
 # Image upload
