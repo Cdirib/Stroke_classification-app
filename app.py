@@ -36,8 +36,22 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.write("Upload a stroke image to automatically predict its classification: Ischemic, Hemorrhagic, or Transient Ischemic Attack.")
-
+# st.write("Upload a stroke image to automatically predict its classification: Ischemic, Hemorrhagic, or Transient Ischemic Attack.")
+st.markdown(
+    """
+    <p style='
+        background-color: #F5F5F5;
+        padding: 10px 15px;
+        border-left: 5px solid #4A90E2;
+        border-radius: 5px;
+        font-size: 16px;
+    '>
+        Upload a stroke image to automatically predict its classification: 
+        <strong>Ischemic</strong>, <strong>Hemorrhagic</strong>, or <strong>Transient Ischemic Attack</strong>.
+    </p>
+    """,
+    unsafe_allow_html=True
+)
 # Image upload
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
