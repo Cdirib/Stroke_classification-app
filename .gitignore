@@ -1,0 +1,20 @@
+# generated files
+target/
+generated/
+
+# dependencies
+Dependencies.toml
+
+# config files
+Config.toml
+#!**/tests/Config.toml
+
+# Python stuff
+venv/
+__pycache__/
+*.pyc
+*.pkl
+*.log
+
+# macOS system file
+.DS_Store
