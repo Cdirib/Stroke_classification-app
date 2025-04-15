@@ -35,11 +35,14 @@ st.markdown(
 st.markdown(
     """
     <p style='
-        #background-color: #F5F5F5;
-        padding: 40px 15px;
-       # border-left: 60px solid #4A90E2;
-        border-radius: 60px;
+        border: 2px solid #4A90E2;
+        background-color: #E8F0FE;
+        padding: 15px;
+        border-radius: 20px;
+        color: #1A237E;
+        text-align: center;
         font-size: 20px;
+        font-weight: bold;
     '>
         Upload a stroke image to automatically predict its classification: 
         <strong>Ischemic</strong>, <strong>Hemorrhagic</strong>, or <strong>Transient Ischemic Attack</strong>.
@@ -48,25 +51,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Image upload
-# uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
-with st.container():
-    st.markdown(
-        """
-        <div style='
-             border: 2px solid #4A90E2;
-             background-color: #E8F0FE;
-            padding: 20px;
-            border-radius: 40px;
-            '>
-        """,
-        unsafe_allow_html=True
-    )
+uploaded_file = st.file_uploader("📤 Choose an image...", type=["jpg", "jpeg", "png"])
 
-    uploaded_file = st.file_uploader("📤 Choose an image...", type=["jpg", "jpeg", "png"])
-
-    st.markdown("</div>", unsafe_allow_html=True)
-
-if uploaded_file is not None:
+ if uploaded_file is not None:
     # Read and display image
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     image = cv2.imdecode(file_bytes, 1)
