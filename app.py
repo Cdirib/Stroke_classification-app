@@ -12,8 +12,6 @@ IMG_SIZE = (224, 224)
 
 # Define label mapping
 labels = ['Normal', 'Stroke']
-
-
 st.markdown(
     """
     <div style='
@@ -51,7 +49,25 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Image upload
+# Styled file uploader section
+st.markdown(
+    """
+    <div style='
+        border: 2px dashed #4A90E2;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #FAFAFA;
+        margin-top: 20px;
+    '>
+    """,
+    unsafe_allow_html=True
+)
+
 uploaded_file = st.file_uploader("📤 Choose an image...", type=["jpg", "jpeg", "png"])
+
+st.markdown("</div>", unsafe_allow_html=True)
+
+#uploaded_file = st.file_uploader("📤 Choose an image...", type=["jpg", "jpeg", "png"])
 
  if uploaded_file is not None:
     # Read and display image
