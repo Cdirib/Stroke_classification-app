@@ -14,8 +14,8 @@ IMG_SIZE = (224, 224)
 labels = ['Normal', 'Stroke']
 
 # Title
-st.title("🧠 Stroke Detection from Brain Scans")
-st.write("Upload a brain scan image and the model will classify it as Normal or Stroke.")
+st.title("🧠 Stroke types prediction")
+st.write("Upload a stroke image to automatically predict its classification: Ischemic, Hemorrhagic, or Transient Ischemic Attack.")
 
 # Image upload
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
