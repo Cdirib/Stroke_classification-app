@@ -15,8 +15,25 @@ labels = ['Normal', 'Stroke']
 
 # Title
 # st.title("🧠 Stroke types prediction")
+#st.markdown(
+#    "<h1 style='color: #4A90E2;'>🧠 Stroke Types Prediction</h1>",
+  #  unsafe_allow_html=True
+#)
 st.markdown(
-    "<h1 style='color: #4A90E2;'>🧠 Stroke Types Prediction</h1>",
+    """
+    <div style='
+        border: 2px solid #4A90E2;
+        background-color: #E8F0FE;
+        padding: 15px;
+        border-radius: 10px;
+        color: #1A237E;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    '>
+        🧠 Stroke Types Prediction
+    </div>
+    """,
     unsafe_allow_html=True
 )
 st.write("Upload a stroke image to automatically predict its classification: Ischemic, Hemorrhagic, or Transient Ischemic Attack.")
