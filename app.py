@@ -41,7 +41,8 @@ st.markdown(
         padding: 10px 15px;
         border-left: 5px solid #4A90E2;
         border-radius: 5px;
-        font-size: 16px;
+        font-size: 20px;
+        color: green;
         margin-bottom: 20px;
     '>
         Upload a stroke image to automatically predict its classification: 
