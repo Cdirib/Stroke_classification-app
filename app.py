@@ -32,15 +32,15 @@ st.markdown(
         font-weight: bold;
     '>
         🧠 Stroke Types Prediction
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+  
 st.write("Upload a stroke image to automatically predict its classification: Ischemic, Hemorrhagic, or Transient Ischemic Attack.")
 
 # Image upload
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
-
+  </div>
+    """,
+    unsafe_allow_html=True
+)
 if uploaded_file is not None:
     # Read and display image
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
