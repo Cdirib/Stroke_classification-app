@@ -55,7 +55,7 @@ with st.container():
         <div style='
             border: 2px dashed #4A90E2;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 40px;
             background-color: #FAFAFA;
         '>
         """,
