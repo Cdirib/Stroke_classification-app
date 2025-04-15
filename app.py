@@ -53,11 +53,11 @@ with st.container():
     st.markdown(
         """
         <div style='
-            border: 2px dashed #4A90E2;
+             border: 2px solid #4A90E2;
+             background-color: #E8F0FE;
             padding: 20px;
             border-radius: 40px;
-            background-color: #FAFAFA;
-        '>
+            '>
         """,
         unsafe_allow_html=True
     )
