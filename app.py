@@ -13,12 +13,7 @@ IMG_SIZE = (224, 224)
 # Define label mapping
 labels = ['Normal', 'Stroke']
 
-# Title
-# st.title("🧠 Stroke types prediction")
-#st.markdown(
-#    "<h1 style='color: #4A90E2;'>🧠 Stroke Types Prediction</h1>",
-  #  unsafe_allow_html=True
-#)
+
 st.markdown(
     """
     <div style='
@@ -53,8 +48,23 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Image upload
-uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
+# uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
+with st.container():
+    st.markdown(
+        """
+        <div style='
+            border: 2px dashed #4A90E2;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #FAFAFA;
+        '>
+        """,
+        unsafe_allow_html=True
+    )
 
+    uploaded_file = st.file_uploader("📤 Choose an image...", type=["jpg", "jpeg", "png"])
+
+    st.markdown("</div>", unsafe_allow_html=True)
 
 if uploaded_file is not None:
     # Read and display image
